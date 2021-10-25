@@ -14,3 +14,24 @@ docker-compose run --rm app go mod tidy
 ~~~bash
 docker-compose up -d
 ~~~
+
+# テスト
+## テスト
+~~~bash
+docker-compose run --rm app go test
+~~~
+
+## カバレッジ、テスト詳細
+~~~bash
+docker-compose run --rm app go test -v -cover
+~~~
+
+## カバレッジプロファイル出力
+~~~bash
+docker-compose run --rm app go test -cover ./... -coverprofile=cover.out
+~~~
+
+## cover.html作成
+~~~bash
+docker-compose run --rm app go tool cover -html=cover.out -o cover.html
+~~~
