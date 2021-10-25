@@ -31,6 +31,11 @@ docker-compose run --rm app go test -short
 docker-compose run --rm app go test -v -short -parallel 3
 ~~~
 
+## ベンチマークテスト実行(正規表現でどのベンチマークファイルを実行するか指定する。今回はドットで全てのファイルを実行する)
+~~~bash
+docker-compose run --rm app go test -v -cover -short -bench .
+~~~
+
 ## カバレッジ、テスト詳細
 ~~~bash
 docker-compose run --rm app go test -v -cover
