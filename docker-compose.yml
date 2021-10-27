@@ -6,8 +6,6 @@ services:
     build:
       context: .
       dockerfile: ./docker/app/Dockerfile
-    volumes:
-      - ./src/:/go/src
     tty: true
     depends_on:
       - postgres
