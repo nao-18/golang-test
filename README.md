@@ -21,6 +21,11 @@ docker-compose up -d
 docker-compose run --rm app go test
 ~~~
 
+## shortオプション付きテスト
+~~~bash
+docker-compose run --rm app go test -short
+~~~
+
 ## カバレッジ、テスト詳細
 ~~~bash
 docker-compose run --rm app go test -v -cover
