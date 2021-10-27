@@ -26,6 +26,11 @@ docker-compose run --rm app go test
 docker-compose run --rm app go test -short
 ~~~
 
+## テストの平行実行(同時に3つのテストケースを平行実行させる場合)
+~~~bash
+docker-compose run --rm app go test -v -short -parallel 3
+~~~
+
 ## カバレッジ、テスト詳細
 ~~~bash
 docker-compose run --rm app go test -v -cover
