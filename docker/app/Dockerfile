@@ -1,7 +1,7 @@
 FROM golang:1.16-alpine
 
-WORKDIR /go/src/github.com/nao-18/golang-test
-COPY ./src .
+# WORKDIR /go/src/github.com/nao-18/golang-test
+# COPY ./src .
 
 RUN apk upgrade --update && \
   apk --no-cache add git
