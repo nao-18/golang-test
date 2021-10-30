@@ -17,6 +17,9 @@ RUN go get -u github.com/cosmtrek/air && \
   go get -u github.com/onsi/gomega && \
   go build -o /go/bin/air github.com/cosmtrek/air
 
+RUN touch $HOME/.ack-ginkgo-rc
+RUN echo "ACK_GINKGO_RC=true" >> .ack-ginkgo-rc
+
 CMD ["air", "-c", ".air.toml"]
 
 EXPOSE 9000
