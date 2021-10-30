@@ -3,7 +3,7 @@ FROM golang:1.16-alpine
 WORKDIR /go/src/github.com/nao-18/golang-test
 COPY ./src .
 
-RUN mkdir tmp
+RUN mkdir /usr/local/go/src/tmp
 
 RUN apk upgrade --update && \
   apk --no-cache add git
