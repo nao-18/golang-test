@@ -13,6 +13,8 @@ RUN apk add build-base
 RUN apk add alpine-sdk
 
 RUN go get -u github.com/cosmtrek/air && \
+  go get -u github.com/onsi/ginkgo/ginkgo && \
+  go get -u github.com/onsi/gomega && \
   go build -o /go/bin/air github.com/cosmtrek/air
 
 CMD ["air", "-c", ".air.toml"]
